@@ -28,10 +28,10 @@ let letter = "";
         count++;
         index = 0;
 
-        setTimeout(type, 1200);
+        setTimeout(type, 1000);
     }
     else{
-        setTimeout(type, 100);
+        setTimeout(type, 80);
     }
 
 })();
