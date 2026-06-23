@@ -2,69 +2,159 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
     background:#0f172a;
-    color:white;
+    color:#fff;
+    line-height:1.7;
 }
 
 header{
-    background:#111827;
-    padding:20px;
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(15,23,42,0.95);
+    backdrop-filter:blur(10px);
+    z-index:1000;
 }
 
 nav{
+    max-width:1200px;
+    margin:auto;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    padding:20px;
 }
 
 nav ul{
     display:flex;
-    gap:20px;
     list-style:none;
+    gap:25px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
 }
 
 .hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:100px 20px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:10px;
+}
+
+.hero h2{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:700px;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
 .btn{
-    display:inline-block;
-    margin-top:20px;
     padding:12px 25px;
     background:#2563eb;
     color:white;
     text-decoration:none;
     border-radius:8px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
 }
 
 section{
-    padding:60px 10%;
+    max-width:1200px;
+    margin:auto;
+    padding:100px 20px;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2.5rem;
 }
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    gap:15px;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
 }
 
-.card,.project{
+.card{
     background:#1e293b;
-    padding:20px;
-    border-radius:10px;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.project{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:20px;
+    transition:.3s;
+}
+
+.project:hover{
+    transform:translateY(-8px);
 }
 
 footer{
     text-align:center;
-    padding:20px;
+    padding:25px;
     background:#111827;
+}
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .hero h2{
+        font-size:1.3rem;
+    }
 }
